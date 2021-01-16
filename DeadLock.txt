@@ -18,7 +18,7 @@ for(i = 0; i< p; i++)
 printf("\n\n Kac Adet Kaynak oldugunu girin : ");
 scanf("%d", &r);
 
-printf("\n\nP deðerlerinin Max Matrisini her P deðeri için girin : ");
+printf("\n\nP deÄŸerlerinin Max Matrisini her P deÄŸeri iÃ§in girin : ");
 for(i = 0; i < p; i++)
 {
 	printf("\n P %d : ", i + 1);
@@ -39,7 +39,7 @@ for(i = 0; i < r; i++)
 		scanf("%d", &availl[i]);	
 		
 		
-	// kullanýlabilir kaynaklarýn bulunduðu alan
+	// kullanÄ±labilir kaynaklarÄ±n bulunduÄŸu alan
 int countt[5]={0,0,0,0,0};
 for(i = 0; i < r; i++){
 	for(j = 0; j < p; j++)	
@@ -49,7 +49,7 @@ countt[i]=alloc[j][i]+countt[i];
 avail[i]=availl[i]-countt[i];
 }
 
-//Ýhtiyaçlarýn bulunmasý
+//Ä°htiyaÃ§larÄ±n bulunmasÄ±
 	for(i = 0; i < p; i++)
 		for(j = 0; j < r; j++)
 			need[i][j] = Max[i][j] - alloc[i][j];
@@ -69,12 +69,12 @@ do
 		printf("%d ",avail[j]);
 			printf("\n");	
 	}
-//ihtiyac matrisi ve kullanýlabilir kaynaklarýn bakýldýðý kod bloðu
+//ihtiyac matrisi ve kullanÄ±labilir kaynaklarÄ±n bakÄ±ldÄ±ÄŸÄ± kod bloÄŸu
 	process = -1;
 
 	for(i = 0; i < p; i++)
 	{
-		if(completed[i] == 0)//Tamamlanmadýysa
+		if(completed[i] == 0)//TamamlanmadÄ±ysa
 		{
 			process = i ;
 			for(j = 0; j < r; j++)
